@@ -26,6 +26,14 @@ void insertionSort(int *L) {
 
 void avergae(int *L) {}
 
+void timeofSort(int *arr, double *dots, int i) {
+  clock_t start, end;
+  start = clock();
+  insertionSort(arr);
+  end = clock();
+  dots[i] = ((double)(end - start)) / CLOCKS_PER_SEC;
+}
+
 int main() {
   int c;
   int arr[MAX_SIZE];
@@ -34,19 +42,13 @@ int main() {
 
   FILE *fp = popen("gnuplot -persistent", "w");
 
-  clock_t start, end;
-
   for (int i = 0; i < 25; i++) {
 
     while (cont < MAX_SIZE && scanf("%d", &c)) {
       arr[cont++] = c;
     }
 
-    start = clock();
-    insertionSort(arr);
-    end = clock();
-    dots[i] = ((double)(end - start)) / CLOCKS_PER_SEC;
-
+    timeofSort(arr, dots, i);
     // Esto solo era para ver si estaba funcionando el ordenamiento
     /* for (int i = 0; i < 10; i++) { */
     /*   printf("%d ", arr[i]); */
