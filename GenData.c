@@ -30,7 +30,9 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
   int n = atoi(argv[1]);
-  printData(n);
+  for (; n > 0; n -= 10) {
+    printData(n);
+  }
   /* genData(n); */
   /* printf("%s", argv[1]); */
   return 0;
