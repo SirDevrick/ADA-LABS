@@ -33,6 +33,7 @@ int main(int argc, char *argv[]) {
   for (; n > 0; n -= 10) {
     printData(n);
   }
+  /* printData(n); */
   /* genData(n); */
   /* printf("%s", argv[1]); */
   return 0;
