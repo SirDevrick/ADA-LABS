@@ -68,11 +68,11 @@ int main() {
 
       timeofSort(arr, dots, i, allArrays);
       // Esto solo era para ver si estaba funcionando el ordenamiento
-      for (int i = 0; i < allArrays; i++) {
-        printf("%d ", arr[i]);
-        arr[i] = 0;
-      }
-      printf("\n");
+      /* for (int i = 0; i < allArrays; i++) { */
+      /*   printf("%d ", arr[i]); */
+      /*   arr[i] = 0; */
+      /* } */
+      /* printf("\n"); */
 
       cont = 0;
     }
